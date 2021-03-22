@@ -32,7 +32,7 @@ def main():
 
     chat_id = "-1001242785018"
     db = SQLighter('user.db')
-    bot = telebot.TeleBot('1625073992:AAHccIO3aUFa1eiSEZiiHPwPgHMaiwSU00E')
+    bot = telebot.TeleBot(str(os.environ.get('BOT_TOKEN')))
     cookie = {'session': '17ab96bd8ffbe8ca58a78657a918558'}
 
     while True:
