@@ -135,13 +135,13 @@ def main():
                                 send_stavka(y)
                                 return 1
                     if  стратегия(12,12) == 1:
-                        break
+                        continue
                     if стратегия(11, 13 ) == 1:
-                        break
+                        continue
                     if стратегия(14, 14) == 1:
-                        break
+                        continue
                     if  стратегия(13, 11) == 1:
-                        break
+                        continue
 
                     send_stavka(14)
 
