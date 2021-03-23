@@ -114,8 +114,7 @@ def main():
                                     return 1
                     if проверка_карт() != 1:
                         message_edit = f"🎮Игра: {get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} обоим🎲\n ❌"
-                        bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
-                                              text=message_edit)
+                  
 
                     db.update_game_old_id(1, get(db.get_game1(1)))
 
