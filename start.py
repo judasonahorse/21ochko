@@ -30,7 +30,7 @@ def main():
 
     url = "https://m.melbet6.com/LiveFeed/Get1x2_VZip?sports=146&champs=1643503&count=50&mode=4&country=1&partner=8&getEmpty=true&mobi=true"
 
-    chat_id = "-1001387826081"
+    chat_id = "866642687"
     db = SQLighter('user.db')
     bot = telebot.TeleBot(str(os.environ.get('BOT_TOKEN')))
     cookie = {'session': '17ab96bd8ffbe8ca58a78657a918558'}
