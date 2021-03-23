@@ -115,8 +115,7 @@ def main():
                                     except: 
                                         print(1)
                                     return 1
-                        else:
-                            return 0
+                     
 
                     if проверка_карт() != 1:
                         try:
