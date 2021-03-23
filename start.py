@@ -35,7 +35,7 @@ def main():
     cookie = {'session': '17ab96bd8ffbe8ca58a78657a918558'}
 
     while True:
-        time.sleep(10)
+
         page = requests.get(url)
 
         if page.status_code == 200:
@@ -134,13 +134,13 @@ def main():
                             if i == x:
                                 send_stavka(y)
                                 return 1
-                    if  стратегия(12,12) != 1:
+                    if  стратегия(12,12) == 1:
                         break
-                    if стратегия(11, 13 ) != 1:
+                    if стратегия(11, 13 ) == 1:
                         break
-                    if стратегия(14, 14) != 1:
+                    if стратегия(14, 14) == 1:
                         break
-                    if  стратегия(13, 11) != 1:
+                    if  стратегия(13, 11) == 1:
                         break
 
                     send_stavka(14)
