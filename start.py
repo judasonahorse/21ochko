@@ -133,14 +133,14 @@ def main():
                         for i in карты_прошлой_игры:
                             if i == x:
                                 send_stavka(y)
-                                return True
-                    if  стратегия(12,12) is True:
+                                return 1
+                    if  стратегия(12,12) != 1:
                         break
-                    if стратегия(11, 13 ) is True:
+                    if стратегия(11, 13 ) != 1:
                         break
-                    if стратегия(14, 14) is True:
+                    if стратегия(14, 14) != 1:
                         break
-                    if  стратегия(13, 11) is True:
+                    if  стратегия(13, 11) != 1:
                         break
 
                     send_stavka(14)
