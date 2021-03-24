@@ -104,13 +104,18 @@ def main():
                         return карты
                     
                     def проверка_карт():
+                        i = 0
 
                         if score(0) is not None and score(1) is not None:
                             for i in score(0) + score(1):
                                 if i == get(db.get_card_old(1)):
                                     bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
-                                                          text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} обоим🎲\n ✅"))
-                                    return 1
+                                                          text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} 🎲\n ✅"))
+                                    i = 1
+                                    break
+                             if i != 1:
+                                 bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
+                                                          text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} 🎲\n ❌"))
                                 
                     проверка_карт() 
 
