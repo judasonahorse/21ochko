@@ -102,21 +102,7 @@ def main():
                         карты = карта1, карта2, карта3, карта4
 
                         return карты
-                    
-                    def проверка_карт():
 
-                        if score(0) is not None and score(1) is not None:
-                            for i in score(0) + score(1):
-                                if i == get(db.get_card_old(1)):
-                                    bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
-                                                          text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} обоим🎲\n ✅"))
-                                    return 1
-                                
-                    if проверка_карт() != 1:
-                        bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
-                                                          text='{}'.format(f"🎮Игра: {get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} обоим🎲\n ❌"))
-                        
-                  
 
                     db.update_game_old_id(1, get(db.get_game1(1)))
 
