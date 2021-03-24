@@ -113,8 +113,8 @@ def main():
                                                           text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} 🎲\n ✅"))
                                     i = 1
                                     break
-                             if i != 1:
-                                 bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
+                            if i != 1:
+                                bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
                                                           text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} 🎲\n ❌"))
                                 
                     проверка_карт() 
