@@ -107,7 +107,8 @@ def main():
                         i = 0
 
                         if score(0) is not None and score(1) is not None:
-                            for i in score(0) + score(1):
+                            #for i in score(0) + score(1):
+                            for i in score(1):
                                 if i == get(db.get_card_old(1)):
                                     bot.edit_message_text(chat_id=chat_id, message_id=get(db.get_message_old(1)),
                                                           text= '{}'.format(f"🎮Игра:{get(db.get_game_old_number(1))}🎮\n🎲Значение: {карты[get(db.get_card_old(1))]} 🎲\n ✅"))
@@ -134,15 +135,14 @@ def main():
 
                     db.update_game_number(1, number_game1['DI'])
 
-                    карты_прошлой_игры = get(db.get_old_card1(1)), get(db.get_old_card2(1)), get(
-                        db.get_old_card3(1)), get(db.get_old_card4(1)), get(db.get_old_1_card1(1)), get(
-                        db.get_old_1_card2(1)), get(
-                        db.get_old_1_card3(1)), get(db.get_old_1_card4(1))
+                    карты_прошлой_игры = get(db.get_old_card1(1)), get(db.get_old_card2(1)), get(db.get_old_card3(1)), get(db.get_old_card4(1)) #,get(db.get_old_1_card1(1)), get(db.get_old_1_card2(1)), get(db.get_old_1_card3(1)), get(db.get_old_1_card4(1))
+                    
 
 
                     def send_stavka(x):
                         db.update_card(1, x)
-                        db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} обоим🎲\n✨Догон: 1 игра✨\n⚠80%⚠").id)
+                        #db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} обоим🎲\n✨Догон: 1 игра✨\n⚠80%⚠").id)
+                        db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} диллер🎲\n✨Догон: 1 игра✨\n⚠80%⚠").id)
 
 
                     def стратегия(x,y):
