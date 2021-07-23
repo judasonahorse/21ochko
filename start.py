@@ -151,11 +151,11 @@ def main():
                                 send_stavka(y)
                                 return 1
                             
-                    if  стратегия(11,14) == 1:
+                    if  стратегия(14,14) == 1:
                         continue
                     if стратегия(12,11 ) == 1:
                         continue
-                    if стратегия(14,12) == 1:
+                    if стратегия(11,12) == 1:
                         continue
                     if  стратегия(12,13 ) == 1:
                         continue
