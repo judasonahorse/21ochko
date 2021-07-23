@@ -142,7 +142,7 @@ def main():
                     def send_stavka(x):
                         db.update_card(1, x)
                         #db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} обоим🎲\n✨Догон: 1 игра✨\n⚠80%⚠").id)
-                        db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} диллер🎲\n✨Догон: 1 игра✨\n⚠80%⚠").id)
+                        db.update_message(1, bot.send_message(chat_id,  f"🎮Игра: {number_game1['DI']}🎮\n🎲Значение: {карты[x]} диллер🎲\n✨Догон: 1 игра✨").id)
 
 
                     def стратегия(x,y):
