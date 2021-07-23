@@ -155,9 +155,9 @@ def main():
                         continue
                     if стратегия(12,11 ) == 1:
                         continue
-                    if стратегия(11,12) == 1:
+                    if стратегия(11,13) == 1:
                         continue
-                    if  стратегия(13,13 ) == 1:
+                    if  стратегия(13,12 ) == 1:
                         continue
 
                     send_stavka(14)
